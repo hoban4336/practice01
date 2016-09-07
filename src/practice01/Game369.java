@@ -1,29 +1,29 @@
 package practice01;
+
+import java.util.Scanner;
+
 public class Game369 {
 	public static void main(String[] args) {
 
 		for (int i = 1; i < 100; i++) {
-			String number = String.valueOf( i );
-			int length = number.length();
-			int count = 0;
 
-			for ( int j = 0; j < length; j++ ) {
-				char c = number.charAt(j);
-				if ( c == '3' || c == '6' || c == '9' ) {
+			String num = String.valueOf(i);
+			int st_len = num.length();
+			int count = 0;
+			char c;
+			for (int j = 0; j < st_len; j++) {
+				c = num.charAt(j);
+				if (c == '3' || c == '6' | c == '9') {
 					count++;
 				}
 			}
-
-			if ( count == 0 ) {
-				continue;
+			if (count > 0) {
+				System.out.print(num + "\t");
+				for (int k = 0; k < count; k++) {
+					System.out.print("짝");
+				}
+				System.out.println("");
 			}
-
-			System.out.print( i + " " );
-			for ( int j = 0; j < count; j++ ) {
-				System.out.print( "¦" );
-			}
-
-			System.out.println( "" );
 		}
 	}
 }

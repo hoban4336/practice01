@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class MultipleOfTree {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner( System.in );
-		
-		System.out.print( "¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : " );
-		int number = scanner.nextInt();
-		
-		if( number % 3 == 0 ) {
-			System.out.println( "3ÀÇ ¹è¼öÀÔ´Ï´Ù." );
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
+		int guess = scanner.nextInt();
+		if (guess % 3 == 0) {
+			System.out.println("3ì˜ ë°°ìˆ˜ ì…ë‹ˆë‹¤.");
+		} else {
+			System.out.println("3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 		}
-		
+
 		scanner.close();
 	}
 }
